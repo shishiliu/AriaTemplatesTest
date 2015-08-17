@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xml:lang="en" lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+		<title>AriaTemplates Test</title>
+		<script type="text/javascript" src="http://cdn.ariatemplates.com/atlatest.js?skin"></script>
+	</head>
+
+	<body>
+		<div id="root" style="margin:30px"></div>
+		<script type="text/javascript">
+		aria.core.DownloadMgr.updateRootMap({
+		    app: {
+		        "*" : "/src/"
+		    }
+		});
+
+		Aria.loadTemplate({
+			classpath:'app.view.Main',
+			div:"root",
+			moduleCtrl: {
+			classpath : "app.view.Controller"
+			}
+		});
+		</script>
+	</body>
+</html>
