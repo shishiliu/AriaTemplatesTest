@@ -6,13 +6,6 @@
 
   {macro main()}
     Hello World!
-
-    {call treeview()/}
-
-  {/macro}
-
-  {macro treeview()}
-  
   {/macro}
 
 {/Template}

@@ -5,8 +5,8 @@ Aria.classDefinition({
 	$constructor : function () {
 		this.$ModuleCtrl.constructor.call(this);
 
-    // add test filter for response mocks
-    aria.core.IOFiltersMgr.addFilter('ariadoc.guides.treeview.mocks.TestMsgHandler');
+    // add filter for response mocks
+    //aria.core.IOFiltersMgr.addFilter('ariadoc.guides.treeview.mocks.TestMsgHandler');
 
 		this._data = {
       menu:null
@@ -16,7 +16,7 @@ Aria.classDefinition({
 		this.$ModuleCtrl.$destructor.call(this);
 	},
 	$prototype : {
-		$publicInterfaceName : 'ariadoc.guides.treeview.ControllerInterface',
+		$publicInterfaceName : 'app.ControllerInterface',
 
     /**
      * Load some data to display in the treeview

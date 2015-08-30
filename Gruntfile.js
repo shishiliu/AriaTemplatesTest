@@ -1,5 +1,4 @@
- 'use strict';
-
+'use strict';
 var LIVERELOAD_PORT = 35729;
 var livereloadMiddleware = require('./node_modules/connect-livereload/index.js')({
     port: LIVERELOAD_PORT
@@ -46,7 +45,7 @@ module.exports = function(grunt) {
         },
         open: {
             server: {
-                path: 'http://localhost:<%%= connect.options.port %>'
+                path: 'http://localhost:<%= connect.options.port %>'
             }
         },
         watch: {
@@ -54,15 +53,15 @@ module.exports = function(grunt) {
                 livereload: LIVERELOAD_PORT
             },
             // gruntfile: {
-            //     files: '<%%= jshint.gruntfile.src %>',
+            //     files: '<%= jshint.gruntfile.src %>',
             //     tasks: ['jshint:gruntfile']
             // },
             // lib_test: {
-            //     files: '<%%= jshint.libTest.src %>',
+            //     files: '<%= jshint.libTest.src %>',
             //     tasks: ['jshint:libTest', 'qunit']
             // },
             livereload: {
-                files: ['<%%= ariaTemplate.root%>/**/*.js', './**/*.html', '<%%= ariaTemplate.root %>/**/*.tpl']
+                files: ['<%= ariaTemplate.root%>/**/*.js', './**/*.html', '<%= ariaTemplate.root %>/**/*.tpl']
             }
 
         },
